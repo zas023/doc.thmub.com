@@ -38,7 +38,7 @@ h6 {
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-.note note-copyright {
+.note.note-copyright {
   background-color: #faf4e0;
   border-color: #c2a442;
 }
@@ -72,9 +72,8 @@ h6 {
   max-height: 0;
 }
 .comments {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 8px 0;
 }
 @media (max-width: 768px) {
   #toc {
