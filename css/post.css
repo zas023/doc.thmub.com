@@ -32,6 +32,16 @@ h6 {
   padding-top: 70px;
   margin-top: -70px;
 }
+.note {
+  padding: 10px;
+  border-left: 6px solid;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.note note-copyright {
+  background-color: #faf4e0;
+  border-color: #c2a442;
+}
 #toc {
   font-size: 16px;
 }
@@ -64,6 +74,7 @@ h6 {
 .comments {
   width: 80%;
   margin: 0 auto;
+  padding: 0 8px 0;
 }
 @media (max-width: 768px) {
   #toc {
