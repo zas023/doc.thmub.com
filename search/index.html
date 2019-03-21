@@ -10,6 +10,7 @@
 
 
 
+
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
@@ -19,14 +20,14 @@
     <meta name="description" content>
     <meta name="author" content="Enosh Zhou">
     <meta name="keywords" content>
-    <title>Archive ~ Enosh&#39;s Blog</title>
+    <title>search ~ Enosh&#39;s Blog</title>
     <link rel="stylesheet" href="/css/Material_Icons.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/main.css">
     
 </head>
 
-<body class=" sidebar-collapse">
+<body class="profile-page sidebar-collapse">
 <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
         <div class="navbar-translate">
@@ -79,7 +80,7 @@
   <div class="page-header header-filter" data-parallax="false" style="background-image: url('https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture'); height: 70vh;">
     
       <div class="container">
-        <h1 class="title text-center">Archive</h1>
+        <h1 class="title text-center">Search</h1>
       </div>
     
   </div>
@@ -90,88 +91,30 @@
       <div class="container">
       
           <div class="section">
-            <div class="row">
-    <div class="col-md-10 offset-md-1">
-        <div class="card">
-            <div class="card-body">
-                <ul class="nav nav-pills nav-pills-rose">
-                    <li class="nav-item"><a class="nav-link active" href="#all" data-toggle="tab">All </a></li>
-                    
-                        <li class="nav-item"><a class="nav-link" href="#Java" data-toggle="tab">Java</a></li>
-                    
-                        <li class="nav-item"><a class="nav-link" href="#Markdown" data-toggle="tab">Markdown</a></li>
-                    
-                </ul>
-                <div class="tab-content tab-space">
-                    <div class="tab-pane active" id="all">
-                        <p class="h3">Total: 3</p>
-                        <hr>
-                        
-                            <div class="row">
-                                <div class="col-md-11">
-                                    <p class="h6">2019-03-20&nbsp;--&nbsp;<a href="/2019/03/20/Java-基础/" class="h3 title">Java 基础</a></p>
-                                </div>
-                            </div>
-                        
-                            <div class="row">
-                                <div class="col-md-11">
-                                    <p class="h6">2019-03-14&nbsp;--&nbsp;<a href="/2019/03/15/Markdown-语法入门/" class="h3 title">Markdown 语法入门</a></p>
-                                </div>
-                            </div>
-                        
-                            <div class="row">
-                                <div class="col-md-11">
-                                    <p class="h6">2019-03-11&nbsp;--&nbsp;<a href="/2019/03/11/hello-world/" class="h3 title">Hello World</a></p>
-                                </div>
-                            </div>
-                         
-                    </div>
-                    
-                        <div class="tab-pane" id="Java">
-                                                            
-                                
-                                
-                                    <div class="row">
-                                        <div class="col-md-11">
-                                            <p class="h6">2019-03-20&nbsp;--&nbsp;<a href="/2019/03/20/Java-基础/" class="h3 title">Java 基础</a></p>
-                                        </div>
-                                    </div>
-                                
-                                
-                                                            
-                                
-                                
-                                
-                                                            
-                                
-                             
-                        </div>
-                    
-                        <div class="tab-pane" id="Markdown">
-                                                            
-                                
-                                
-                                
-                                                            
-                                
-                                
-                                    <div class="row">
-                                        <div class="col-md-11">
-                                            <p class="h6">2019-03-14&nbsp;--&nbsp;<a href="/2019/03/15/Markdown-语法入门/" class="h3 title">Markdown 语法入门</a></p>
-                                        </div>
-                                    </div>
-                                
-                                
-                                                            
-                                
-                             
-                        </div>
-                    
-                </div>
-            </div>  
+            
+    <form class="form-inline ml-auto">
+
+<div class="form-group has-default bmd-form-group">
+    <input type="text" class="form-control" id="local-search-input" placeholder="Regular">
+    <button type="submit" class="btn btn-white btn-raised btn-fab btn-round" id="btn">
+        <i class="material-icons">search</i>
+        <div class="ripple-container">
         </div>
-    </div>
+    </button>
 </div>
+
+<div id="local-search-result" class="local-search-result-cls"></div>
+
+<script>
+        $(#btn).ready(function(){
+            var path = "/search.xml";
+        console.log(var)
+        })
+</script>
+
+<br><br>
+</form>
+
 
           </div>
       
