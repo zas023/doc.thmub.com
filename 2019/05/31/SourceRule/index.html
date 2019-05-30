@@ -86,7 +86,7 @@
       <div class="container">
         <h1 class="title text-center post_title">览阅APP书源规则</h1>
         <p class="text-center"><b>Thursday, May 30th 2019, 7:58 pm</b></p>
-        <p class="text-center"><b>字数统计: 1.7k | 阅读时长≈ 7 分钟</b></p>
+        <p class="text-center"><b>字数统计: 1.6k | 阅读时长≈ 6 分钟</b></p>
       </div>
     
   </div>
@@ -275,26 +275,25 @@
 <li>例子：//div[@id=’listtj’]//a/@href</li>
 <li>注意：选填</li>
 </ul>
-<h1 id="书源示例"><a href="#书源示例" class="headerlink" title="书源示例"></a>书源示例</h1><h2 id="Json"><a href="#Json" class="headerlink" title="Json"></a>Json</h2><pre><code class="json">{
-    &quot;rootLink&quot;: &quot;https://www.xbiquge6.com&quot;,
-    &quot;sourceName&quot;: &quot;新笔趣阁&quot;,
-    &quot;sourceType&quot;: &quot;xpath&quot;,
+<h1 id="书源示例"><a href="#书源示例" class="headerlink" title="书源示例"></a>书源示例</h1><h2 id="Json"><a href="#Json" class="headerlink" title="Json"></a>Json</h2><pre><code class="json"> {
+    &quot;rootLink&quot;: &quot;http://api.zhuishushenqi.com&quot;,
+    &quot;sourceName&quot;: &quot;追书神器&quot;,
+    &quot;sourceType&quot;: &quot;json&quot;,
     &quot;encodeType&quot;: &quot;utf-8&quot;,
-    &quot;searchLink&quot;: &quot;/search.php?keyword=%s&quot;,
-    &quot;ruleSearchTitle&quot;: &quot;//div[@class=&#39;result-game-item-detail&#39;]//h3//a/@title&quot;,
-    &quot;ruleSearchAuthor&quot;: &quot;//div[@class=&#39;result-game-item-info&#39;]//p[1]/span[2]/text()&quot;,
-    &quot;ruleSearchDesc&quot;: &quot;//p[@class=&#39;result-game-item-desc&#39;]/text()&quot;,
-    &quot;ruleSearchCover&quot;: &quot;//div[@class=&#39;result-game-item-pic&#39;]//a//img/@src&quot;,
-    &quot;ruleSearchLink&quot;: &quot;//div[@class=&#39;result-game-item-detail&#39;]//h3//a/@href&quot;,
-    &quot;ruleDetailAuthor&quot;: &quot;//div[@id=&#39;info&#39;]/p[1]/text()&quot;,
-    &quot;ruleDetailDesc&quot;: &quot;//div[@id=&#39;intro&#39;]/p[1]/text()&quot;,
-    &quot;ruleDetailCover&quot;: &quot;//div[@id=&#39;fmimg&#39;]/img/@src&quot;,
-    &quot;ruleChapters&quot;: &quot;//div[@id=&#39;list&#39;]&quot;,
-    &quot;ruleChapterLink&quot;: &quot;//dl//dd//a/@href&quot;,
-    &quot;ruleChapterTitle&quot;: &quot;//dl//dd//a/text()&quot;,
-    &quot;ruleChapterContent&quot;: &quot;//div[@id=&#39;content&#39;]&quot;,
-    &quot;ruleFindBookLink&quot;: &quot;//div[@id=&#39;listtj&#39;]//a/@href&quot;,
-    &quot;ruleFindBookTitle&quot;: &quot;//div[@id=&#39;listtj&#39;]//a/text()&quot;,
+    &quot;searchLink&quot;: &quot;/book/fuzzy-search?query=%s&quot;,
+    &quot;ruleSearchBooks&quot;: &quot;books&quot;,
+    &quot;ruleSearchTitle&quot;: &quot;title&quot;,
+    &quot;ruleSearchAuthor&quot;: &quot;author&quot;,
+    &quot;ruleSearchDesc&quot;: &quot;shortIntro&quot;,
+    &quot;ruleSearchCover&quot;: &quot;cover@http://statics.zhuishushenqi.com%s&quot;,
+    &quot;ruleSearchLink&quot;: &quot;_id@http://api.zhuishushenqi.com/book/%s&quot;,
+    &quot;ruleCatalogLink&quot;: &quot;_id@http://api.zhuishushenqi.com/mix-atoc/%s?view=chapters&quot;,
+    &quot;ruleFindLink&quot;: &quot;_id@http://api.zhuishushenqi.com/book/%s/recommend&quot;,
+    &quot;ruleDetailDesc&quot;: &quot;longIntro&quot;,
+    &quot;ruleChapters&quot;: &quot;mixToc$chapters&quot;,
+    &quot;ruleChapterLink&quot;: &quot;link@UrlEncode#http://chapterup.zhuishushenqi.com/chapter/%s&quot;,
+    &quot;ruleChapterTitle&quot;: &quot;title&quot;,
+    &quot;ruleChapterContent&quot;: &quot;chapter$body&quot;
   }
 </code></pre>
 <h2 id="Xpath"><a href="#Xpath" class="headerlink" title="Xpath"></a>Xpath</h2><pre><code class="json">{
@@ -316,10 +315,7 @@
     &quot;ruleChapterTitle&quot;: &quot;//dl//dd//a/text()&quot;,
     &quot;ruleChapterContent&quot;: &quot;//div[@id=&#39;content&#39;]&quot;,
     &quot;ruleFindBookLink&quot;: &quot;//div[@id=&#39;listtj&#39;]//a/@href&quot;,
-    &quot;ruleFindBookTitle&quot;: &quot;//div[@id=&#39;listtj&#39;]//a/text()&quot;,
-    &quot;orderNumber&quot;: &quot;0&quot;,
-    &quot;isSelected&quot;: &quot;true&quot;,
-    &quot;weight&quot;: &quot;0&quot;
+    &quot;ruleFindBookTitle&quot;: &quot;//div[@id=&#39;listtj&#39;]//a/text()&quot;
   }
 </code></pre>
 
