@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content>
+    <meta name="author" content="Enosh Zhou">
+    <meta name="keywords" content>
+    <title>览阅APP书源规则 ~ Enosh&#39;s Blog</title>
+    <link rel="stylesheet" href="/css/Material_Icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    
+        <link rel="stylesheet" href="/css/post.css">
+        
+            <link rel="stylesheet" href="/css/Prettify/tomorrow-night-eighties.min.css">
+        
+    
+</head>
+
+<body class=" sidebar-collapse">
+<nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="/">
+                Enosh&#39;s Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="/archives">
+                                    archives
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about">
+                                    about
+                                </a>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title data-placement="bottom" href="https://github.com/zas023" target="_blank" data-original-title="See me here">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title data-placement="bottom" href="https://twitter.com/realDonaldTrump" target="_blank" data-original-title="See me here">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+    </div>
+</nav>
+    
+  <div class="page-header header-filter" data-parallax="false" style="background-image: url('https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture'); height: 70vh;">
+    
+      <div class="container">
+        <h1 class="title text-center post_title">览阅APP书源规则</h1>
+        <p class="text-center"><b>Thursday, May 30th 2019, 7:58 pm</b></p>
+        <p class="text-center"><b>字数统计: 1.7k | 阅读时长≈ 7 分钟</b></p>
+      </div>
+    
+  </div>
+
+  
+  
+  <!-- Content -->
+<div class="row" style="margin: 0 0 0; z-index: 999;">
+  <div class="col-md-8 offset-md-1">
+    <div class="main main-raised">
+      <div class="container">
+        <div class="section">
+          <div class="post_content">
+              <p># </p>
+<h1 id="书源格式"><a href="#书源格式" class="headerlink" title="书源格式"></a>书源格式</h1><ul>
+<li>Xpath: 适用于第三方文学网站</li>
+<li>Json: 适用于第三方API接口</li>
+</ul>
+<h1 id="书源规则"><a href="#书源规则" class="headerlink" title="书源规则"></a>书源规则</h1><blockquote>
+<p>目前Json格式规则已适配追书神器API，但由于第三方接口限制访问，建议使用Xpath语法。</p>
+</blockquote>
+<h2 id="书源地址"><a href="#书源地址" class="headerlink" title="书源地址"></a>书源地址</h2><ul>
+<li>字段：rootLink</li>
+<li>注释：作为书源的主键，利用了URL的唯一性</li>
+<li>例子：<a href="https://www.zwdu.com" target="_blank" rel="noopener">https://www.zwdu.com</a></li>
+<li>注意：末尾不加斜杠</li>
+</ul>
+<h2 id="书源名称"><a href="#书源名称" class="headerlink" title="书源名称"></a>书源名称</h2><ul>
+<li>字段：sourceName</li>
+<li>注释：作为书源的名称</li>
+<li>例子：八一文学网</li>
+<li>注意：书源名称唯一</li>
+</ul>
+<h2 id="书源类型"><a href="#书源类型" class="headerlink" title="书源类型"></a>书源类型</h2><ul>
+<li>字段：sourceType</li>
+<li>注释：xpath和json二选一</li>
+<li>例子：xpath</li>
+<li>注意：小写</li>
+</ul>
+<h2 id="编码格式"><a href="#编码格式" class="headerlink" title="编码格式"></a>编码格式</h2><ul>
+<li>字段：encodeType</li>
+<li>注释：指书源返回内容编码格式，该字段可不填，默认utf-8</li>
+<li>例子：utf-8</li>
+<li>注意：有些书源搜索利用了第三方工具，返回结果编码予整体书源编码不一致，则使用&amp;符号分别连接整体网站编码和搜索页编码。如 gbk&amp;utf-8</li>
+</ul>
+<h2 id="搜索地址"><a href="#搜索地址" class="headerlink" title="搜索地址"></a>搜索地址</h2><ul>
+<li>字段：searchLink</li>
+<li>注释：搜索页面地址，%s为关键字占位符</li>
+<li>例子：/search.php?keyword=%s</li>
+<li>注意：以斜杠开始，用于和书源地址拼接成一个完整的搜索地址</li>
+</ul>
+<hr>
+<h2 id="搜索结果列表"><a href="#搜索结果列表" class="headerlink" title="搜索结果列表"></a>搜索结果列表</h2><ul>
+<li>字段：ruleSearchBooks</li>
+<li>注释：主要用于Json格式中搜索结果定位。若为多层结构，则使用$符号拼接Json的键名</li>
+<li>例子：books</li>
+<li>注意：xpath格式中选填，若填写则将会与后面搜索结果的其他规则拼接成一个完整的xpath路径</li>
+</ul>
+<h2 id="搜索结果名称"><a href="#搜索结果名称" class="headerlink" title="搜索结果名称"></a>搜索结果名称</h2><ul>
+<li>字段：ruleSearchTitle</li>
+<li>注释：搜索书籍的书名</li>
+<li>例子：//div[@class=’result-game-item-detail’]//h3//a/@title</li>
+<li>注意：</li>
+</ul>
+<h2 id="搜索结果作者"><a href="#搜索结果作者" class="headerlink" title="搜索结果作者"></a>搜索结果作者</h2><ul>
+<li>字段：ruleSearchTitle</li>
+<li>注释：搜索书籍的作者</li>
+<li>例子：//div[@class=’result-game-item-info’]//p[1]/span[2]/text()</li>
+<li>注意：</li>
+</ul>
+<h2 id="搜索结果简介"><a href="#搜索结果简介" class="headerlink" title="搜索结果简介"></a>搜索结果简介</h2><ul>
+<li>字段：ruleSearchAuthor</li>
+<li>注释：搜索书籍的简介；选填，因为结果页面可能没有该内容</li>
+<li>例子：//p[@class=’result-game-item-desc’]/text()</li>
+<li>注意：</li>
+</ul>
+<h2 id="搜索结果封面"><a href="#搜索结果封面" class="headerlink" title="搜索结果封面"></a>搜索结果封面</h2><ul>
+<li>字段：ruleSearchCover</li>
+<li>注释：搜索书籍的封面，选填</li>
+<li>例子：//div[@class=’result-game-item-pic’]//a//img/@src</li>
+<li>注意：</li>
+</ul>
+<h2 id="搜索结果地址"><a href="#搜索结果地址" class="headerlink" title="搜索结果地址"></a>搜索结果地址</h2><ul>
+<li>字段：ruleSearchLink</li>
+<li>注释：搜索书籍的详情地址</li>
+<li>例子：//div[@class=’result-game-item-detail’]//h3//a/@href</li>
+<li>注意：</li>
+</ul>
+<hr>
+<h2 id="书籍详情地址"><a href="#书籍详情地址" class="headerlink" title="书籍详情地址"></a>书籍详情地址</h2><ul>
+<li>字段：ruleDetailBook</li>
+<li>注释：主要用于Json格式中的定位</li>
+<li>例子：books</li>
+<li>注意：xpath格式中选填，若填写则将会与后面搜索结果的其他规则拼接成一个完整的xpath路径</li>
+</ul>
+<h2 id="书籍详情名称"><a href="#书籍详情名称" class="headerlink" title="书籍详情名称"></a>书籍详情名称</h2><ul>
+<li>字段：ruleDetailTitle</li>
+<li>注释：定位书籍详情页的名称</li>
+<li>例子：//div[@id=’info’]/p[1]/text()</li>
+<li>注意：选填，不填则使用搜索结果中对应的内容</li>
+</ul>
+<h2 id="书籍详情作者"><a href="#书籍详情作者" class="headerlink" title="书籍详情作者"></a>书籍详情作者</h2><ul>
+<li>字段：ruleDetailAuthor</li>
+<li>注释：定位书籍详情页的名称</li>
+<li>例子：//div[@id=’info’]/p[1]/text()</li>
+<li>注意：选填，不填则使用搜索结果中对应的内容</li>
+</ul>
+<h2 id="书籍详情简介"><a href="#书籍详情简介" class="headerlink" title="书籍详情简介"></a>书籍详情简介</h2><ul>
+<li>字段：ruleDetailAuthor</li>
+<li>注释：定位书籍详情页的简介，用于补充搜索结果没有的内容</li>
+<li>例子：//div[@id=’info’]/p[1]/text()</li>
+<li>注意：选填，不填则使用搜索结果中对应的内容</li>
+</ul>
+<h2 id="书籍详情封面"><a href="#书籍详情封面" class="headerlink" title="书籍详情封面"></a>书籍详情封面</h2><ul>
+<li>字段：ruleDetailCover</li>
+<li>注释：定位书籍详情页的封面地址，用于补充搜索结果没有的内容</li>
+<li>例子：//div[@id=’info’]/p[1]/text()</li>
+<li>注意：选填，不填则使用搜索结果中对应的内容</li>
+</ul>
+<h2 id="书籍发现地址"><a href="#书籍发现地址" class="headerlink" title="书籍发现地址"></a>书籍发现地址</h2><ul>
+<li>字段：ruleFindLink</li>
+<li>注释：定位书籍详情页的推荐书籍地址</li>
+<li>例子：//div[@id=’info’]/p[1]/text()</li>
+<li>注意：选填，不填则使用搜索结果中对应的内容</li>
+</ul>
+<h2 id="书籍目录地址"><a href="#书籍目录地址" class="headerlink" title="书籍目录地址"></a>书籍目录地址</h2><ul>
+<li>字段：ruleCatalogLink</li>
+<li>注释：定位书籍详情页的目录地址</li>
+<li>例子：//div[@id=’info’]/p[1]/text()</li>
+<li>注意：选填，不填代表目录地址即为书籍详情地址</li>
+</ul>
+<hr>
+<h2 id="目录章节列表"><a href="#目录章节列表" class="headerlink" title="目录章节列表"></a>目录章节列表</h2><ul>
+<li>字段：ruleChapters</li>
+<li>注释：主要用于Json格式中目录定位</li>
+<li>例子：//div[@id=’list’]</li>
+<li>注意：同搜索结果列表</li>
+</ul>
+<h2 id="目录章节名称"><a href="#目录章节名称" class="headerlink" title="目录章节名称"></a>目录章节名称</h2><ul>
+<li>字段：ruleChapterTitle</li>
+<li>注释：定位目录页面每个章节名称</li>
+<li>例子：//dl//dd//a/text()</li>
+<li>注意：</li>
+</ul>
+<h2 id="目录章节地址"><a href="#目录章节地址" class="headerlink" title="目录章节地址"></a>目录章节地址</h2><ul>
+<li>字段：ruleChapterLink</li>
+<li>注释：定位目录页面每个章节地址</li>
+<li>例子：//dl//dd//a/@href</li>
+<li>注意：</li>
+</ul>
+<hr>
+<h2 id="章节内容"><a href="#章节内容" class="headerlink" title="章节内容"></a>章节内容</h2><ul>
+<li>字段：ruleChapterContent</li>
+<li>注释：用于定位书籍章节页面中的内容部分</li>
+<li>例子：//div[@id=’content’]</li>
+<li>注意：</li>
+</ul>
+<hr>
+<h2 id="发现书籍列表"><a href="#发现书籍列表" class="headerlink" title="发现书籍列表"></a>发现书籍列表</h2><ul>
+<li>字段：ruleFindBooks</li>
+<li>注释：解析推荐书籍的列表，同搜索结果列表</li>
+<li>例子：</li>
+<li>注意：选填</li>
+</ul>
+<h2 id="发现书籍名称"><a href="#发现书籍名称" class="headerlink" title="发现书籍名称"></a>发现书籍名称</h2><ul>
+<li>字段：ruleFindBookTitle</li>
+<li>注释：定位推荐书籍的名称</li>
+<li>例子：//div[@id=’listtj’]//a/text()</li>
+<li>注意：选填</li>
+</ul>
+<h2 id="发现书籍作者"><a href="#发现书籍作者" class="headerlink" title="发现书籍作者"></a>发现书籍作者</h2><ul>
+<li>字段：ruleFindBookAuthor</li>
+<li>注释：定位推荐书籍的作者</li>
+<li>例子：//div[@id=’listtj’]//a/text()</li>
+<li>注意：选填</li>
+</ul>
+<h2 id="发现书籍封面"><a href="#发现书籍封面" class="headerlink" title="发现书籍封面"></a>发现书籍封面</h2><ul>
+<li>字段：ruleFindBookCover</li>
+<li>注释：定位推荐书籍的封面</li>
+<li>例子：//div[@id=’listtj’]//a/@href</li>
+<li>注意：选填</li>
+</ul>
+<h2 id="发现书籍地址"><a href="#发现书籍地址" class="headerlink" title="发现书籍地址"></a>发现书籍地址</h2><ul>
+<li>字段：ruleFindBookCover</li>
+<li>注释：定位推荐书籍的详情地址</li>
+<li>例子：//div[@id=’listtj’]//a/@href</li>
+<li>注意：选填</li>
+</ul>
+<h1 id="书源示例"><a href="#书源示例" class="headerlink" title="书源示例"></a>书源示例</h1><h2 id="Json"><a href="#Json" class="headerlink" title="Json"></a>Json</h2><pre><code class="json">{
+    &quot;rootLink&quot;: &quot;https://www.xbiquge6.com&quot;,
+    &quot;sourceName&quot;: &quot;新笔趣阁&quot;,
+    &quot;sourceType&quot;: &quot;xpath&quot;,
+    &quot;encodeType&quot;: &quot;utf-8&quot;,
+    &quot;searchLink&quot;: &quot;/search.php?keyword=%s&quot;,
+    &quot;ruleSearchTitle&quot;: &quot;//div[@class=&#39;result-game-item-detail&#39;]//h3//a/@title&quot;,
+    &quot;ruleSearchAuthor&quot;: &quot;//div[@class=&#39;result-game-item-info&#39;]//p[1]/span[2]/text()&quot;,
+    &quot;ruleSearchDesc&quot;: &quot;//p[@class=&#39;result-game-item-desc&#39;]/text()&quot;,
+    &quot;ruleSearchCover&quot;: &quot;//div[@class=&#39;result-game-item-pic&#39;]//a//img/@src&quot;,
+    &quot;ruleSearchLink&quot;: &quot;//div[@class=&#39;result-game-item-detail&#39;]//h3//a/@href&quot;,
+    &quot;ruleDetailAuthor&quot;: &quot;//div[@id=&#39;info&#39;]/p[1]/text()&quot;,
+    &quot;ruleDetailDesc&quot;: &quot;//div[@id=&#39;intro&#39;]/p[1]/text()&quot;,
+    &quot;ruleDetailCover&quot;: &quot;//div[@id=&#39;fmimg&#39;]/img/@src&quot;,
+    &quot;ruleChapters&quot;: &quot;//div[@id=&#39;list&#39;]&quot;,
+    &quot;ruleChapterLink&quot;: &quot;//dl//dd//a/@href&quot;,
+    &quot;ruleChapterTitle&quot;: &quot;//dl//dd//a/text()&quot;,
+    &quot;ruleChapterContent&quot;: &quot;//div[@id=&#39;content&#39;]&quot;,
+    &quot;ruleFindBookLink&quot;: &quot;//div[@id=&#39;listtj&#39;]//a/@href&quot;,
+    &quot;ruleFindBookTitle&quot;: &quot;//div[@id=&#39;listtj&#39;]//a/text()&quot;,
+  }
+</code></pre>
+<h2 id="Xpath"><a href="#Xpath" class="headerlink" title="Xpath"></a>Xpath</h2><pre><code class="json">{
+    &quot;rootLink&quot;: &quot;https://www.zwdu.com&quot;,
+    &quot;sourceName&quot;: &quot;八一中文&quot;,
+    &quot;sourceType&quot;: &quot;xpath&quot;,
+    &quot;encodeType&quot;: &quot;gbk&amp;utf-8&quot;,
+    &quot;searchLink&quot;: &quot;/search.php?keyword=%s&quot;,
+    &quot;ruleSearchTitle&quot;: &quot;//div[@class=&#39;result-game-item-detail&#39;]//h3//a/@title&quot;,
+    &quot;ruleSearchAuthor&quot;: &quot;//div[@class=&#39;result-game-item-info&#39;]//p[1]/span[2]/text()&quot;,
+    &quot;ruleSearchDesc&quot;: &quot;//p[@class=&#39;result-game-item-desc&#39;]/text()&quot;,
+    &quot;ruleSearchCover&quot;: &quot;//div[@class=&#39;result-game-item-pic&#39;]//a//img/@src&quot;,
+    &quot;ruleSearchLink&quot;: &quot;//div[@class=&#39;result-game-item-detail&#39;]//h3//a/@href&quot;,
+    &quot;ruleDetailAuthor&quot;: &quot;//div[@id=&#39;info&#39;]/p[1]/text()&quot;,
+    &quot;ruleDetailDesc&quot;: &quot;//div[@id=&#39;intro&#39;]/p[1]/text()&quot;,
+    &quot;ruleDetailCover&quot;: &quot;//div[@id=&#39;fmimg&#39;]/img/@src&quot;,
+    &quot;ruleChapters&quot;: &quot;//div[@id=&#39;list&#39;]&quot;,
+    &quot;ruleChapterLink&quot;: &quot;//dl//dd//a/@href&quot;,
+    &quot;ruleChapterTitle&quot;: &quot;//dl//dd//a/text()&quot;,
+    &quot;ruleChapterContent&quot;: &quot;//div[@id=&#39;content&#39;]&quot;,
+    &quot;ruleFindBookLink&quot;: &quot;//div[@id=&#39;listtj&#39;]//a/@href&quot;,
+    &quot;ruleFindBookTitle&quot;: &quot;//div[@id=&#39;listtj&#39;]//a/text()&quot;,
+    &quot;orderNumber&quot;: &quot;0&quot;,
+    &quot;isSelected&quot;: &quot;true&quot;,
+    &quot;weight&quot;: &quot;0&quot;
+  }
+</code></pre>
+
+          </div>
+          <br><br>
+          <div>
+              <p>
+                       
+                      <span class="badge badge-default">#&nbsp;书源</span>
+                      &nbsp;
+                      
+              </p>
+          </div>
+          <br><br>
+         
+         <div class="alert alert-info">
+         <div class="container">
+         <div class="alert-icon">
+         <i class="material-icons">info_outline</i>
+         </div>
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+         <span aria-hidden="true">
+         <i class="material-icons">clear</i>
+         </span>
+         </button><b>Info alert:</b> 
+         本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC">CC BY-SA 3.0协议</a> 。转载请注明出处！
+         </div>
+         </div>
+         
+        </div>
+      </div>  
+    </div>
+  </div>
+  <!-- TOC -->
+  
+  <div id="toc">
+    <p class="toc-title"><i class="material-icons" style="vertical-align:middle">toc</i>Toc:</p> 
+    <div id="tocbot"></div>
+  </div>
+
+</div>
+
+<br><br><br>
+
+<!-- Comments -->
+<div class="col-md-8 offset-md-1">
+    <div class="main main-raised">
+      <div class="container">
+        <div class="section">
+          <div class="comments" id="comments">
+          
+          
+          
+<div id="vcomments" style="width: 100%; margin: 0 auto;"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '#vcomments',
+            notify: notify,
+            verify: verify,
+            app_id: "pXylk97N2CX2jSPUYUQdcRDY-gzGzoHsz",
+            app_key: "UhwAIrCLJ4MP7SDxapSwYcwf",
+            placeholder: "说点什么",
+            avatar:"retro",
+            meta: ['nick','mail','link'],
+            pageSize: "10",
+            visitor: "false"
+        });
+    };
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://valine.js.org">comments powered by Valine.</a></noscript>
+
+          
+          </div>
+      </div>  
+    </div>
+  </div>
+</div>
+  
+
+<footer class="footer footer-default">
+        <div class="container">
+          <div class="float-left" style="padding: 15px 0;">
+          
+              <span class="site-uv">
+              <i class="fa fa-user"></i>总访客 <span class="busuanzi-value" id="busuanzi_value_site_uv">2503</span> 人 </span> &nbsp; | &nbsp;
+              <span class="site-pv">
+              <i class="fa fa-eye"></i>访问量 <span class="busuanzi-value" id="busuanzi_value_site_pv">9318</span> 次</span>
+          
+          </div>
+          <div class="copyright float-right">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>&nbsp;<a href="https://hexo.io/zh-cn/" target="_blank">HEXO</a>&nbsp;<i class="material-icons">favorite_border</i>
+            <a href="https://github.com/invom/Material-T" target="_blank">Material-T</a>
+          </div>
+        </div>
+</footer>
+
+<!--   Core JS Files   -->
+<script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/mdb.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/local_search.js"></script>
+<script src="/js/core/bootstrap-material-design.min.js"></script>
+<script src="/js/plugins/moment.min.js"></script>
+<!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+<script src="/js/material-kit.min.js?v=2.0.5"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <script src="/js/post.js"></script>
+    <script src="/js/plugins/prettify.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('pre').addClass('prettyprint linenums');
+            prettyPrint();
+        })
+    </script>
+  
+<script src="/live2d_models/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2d_models/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2d_models/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false}});</script></body>
+</html>
