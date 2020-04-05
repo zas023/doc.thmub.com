@@ -32,7 +32,7 @@
     };
     window.$docsify = {
       name: 'Java学习笔记',
-      repo: 'https://github.com/zas023/CSNotes',
+      repo: 'https://github.com/zas023/zas023.github.io',
       auto2top: true,
       coverpage: true,
       loadSidebar: true,
@@ -48,6 +48,19 @@
         previousText: 'PREVIOUS',
         nextText: 'NEXT',
         crossChapter: true
+      },
+      footer: {
+        copy: '<span>&copy; 2020</span>',
+        auth: 'Create by Enosh & 渝ICP备 - 18011579号',
+        pre: '<hr/>',
+        style: 'text-align: right;',
+        style: 'className'
+      },
+      count: {
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese'
       },
       plugins: [
         function (hook, vm) {
@@ -88,5 +101,9 @@
   <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
+  <!-- https://github.com/erickjx/docsify-footer-enh -->
+  <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+  <!-- https://github.com/827652549/docsify-count -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
 </body>
 </html>
