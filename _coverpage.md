@@ -12,4 +12,4 @@
 <!-- 自定义背景色 -->
 <!-- ![color](#f0f0f0) -->
 <!-- 自定义背景图 -->
-![](https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture)
+<!-- ![](https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture) -->
